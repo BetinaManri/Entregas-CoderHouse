@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Guitarra",
+    "price": 120,
+    "thumbnail": "https://media.istockphoto.com/id/522308498/es/foto/guitarra-el%C3%A9ctrica-aislada-sobre-blanco.webp?s=612x612&w=is&k=20&c=IcU8v4ig2HvCwQHaKn7XYktRZqGjSv6szYejY6-NQOk=",
+    "id": 1
+  },
+  {
+    "title": "Violín",
+    "price": 105,
+    "thumbnail": "https://media.istockphoto.com/id/182724120/es/foto/viol%C3%ADn-sobre-fondo-blanco.webp?s=612x612&w=is&k=20&c=Qi7xaSiF-iOAxLCZq1lukrLU6tCY5hl_kokiymRu7u4=",
+    "id": 2
+  },
+  {
+    "title": "Trompeta",
+    "price": 215,
+    "thumbnail": "https://media.istockphoto.com/id/90700216/es/foto/trompeta.webp?s=612x612&w=is&k=20&c=cogpFpLrqP4DywaPqG1rOyXM507zi17m3wZ5N-COuLk=",
+    "id": 3
+  }
+]
