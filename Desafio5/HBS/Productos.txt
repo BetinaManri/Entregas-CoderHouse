@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Guitarra",
+    "precio": 120,
+    "url": "https://cdn0.iconfinder.com/data/icons/ie_Financial_set/128/13.png",
+    "id": 1
+  },
+  {
+    "nombre": "Violin",
+    "precio": "120",
+    "url": "https://cdn4.iconfinder.com/data/icons/education-74/100/violin-128.png",
+    "id": 2
+  },
+  {
+    "nombre": "Guitarra electrica",
+    "precio": "199.50",
+    "url": "https://cdn0.iconfinder.com/data/icons/icons-unleashed-vol1/128/-guitar.png",
+    "id": 3
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Guitarra",
+    "precio": 120,
+    "url": "https://cdn0.iconfinder.com/data/icons/ie_Financial_set/128/13.png",
+    "id": 1
+  },
+  {
+    "nombre": "Violín",
+    "precio": 105,
+    "url": "https://media.istockphoto.com/vectors/minimalist-violin-with-bow-amidst-notes-vector-id1314614498?b=1&k=20&m=1314614498&s=170x170&h=M7bD8UWeesfH3bXcSiIJCpoG25p5GDY_cJvt5tVs0C8=",
+    "id": 2
+  },
+  {
+    "nombre": "Trompeta",
+    "precio": 215,
+    "url": "https://cdn1.iconfinder.com/data/icons/music-instruments-25/24/music_instrument_play_tromp_trompet_horm-128.png",
+    "id": 3
+  },
+  {
+    "nombre": "Guitarra electrica",
+    "precio": "200.1",
+    "url": "https://cdn0.iconfinder.com/data/icons/icons-unleashed-vol1/128/-guitar.png",
+    "id": 4
+  }
+]

@@ -1,0 +1,36 @@
+<header>
+    
+</header>
+<body>
+  <div class="container mt-3">
+    <div class="jumbotron">
+      <h1 style="color: rgb(3, 3, 159)">Ingrese nuevo producto:</h1>
+      <br />
+
+      <form action="/api/productos" method="post">
+        <div class="form-group">
+          <label for="nombre"><b>Nombre</b></label>
+          <input id="nombre" class="form-control" type="text" name="nombre" required="true" placeholder="Instrumento"/>
+        </div>
+
+        <div class="form-group">
+          <label for="precio"><b>Precio</b></label>
+          <input  id="precio" class="form-control" type="number" step="any" name="precio" required="true" placeholder="$100.0"  />
+        </div>
+
+        <div class="form-group">
+          <label for="url"><b>Foto URL</b></label>
+          <input id="url" class="form-control" type="text" name="url" required="true" placeholder="http://ejemplo.com"/>
+        </div>
+
+        <button class="btn btn-success mt-3 mb-5">Guardar</button>
+        
+      </form>
+
+      <form action="/api/productos/lista/ver" method="get">
+        <button>Ver productos guardados</button>
+      </form>
+
+    </div>
+  </div>
+</body>
