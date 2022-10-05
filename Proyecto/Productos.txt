@@ -1,0 +1,52 @@
+[
+  {
+    "nombre": "Smart TV",
+    "descripcion": "Full HD 40 pulg.",
+    "codigo": 12345,
+    "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_601675-MLA49509045387_032022-F.webp",
+    "precio": "297",
+    "stock": 20,
+    "id": 1,
+    "timeStamp": 1664811860113
+  },
+  {
+    "nombre": "Parlante JBL",
+    "descripcion": "Flip 5 portátil con bluetooth",
+    "codigo": 12346,
+    "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_672818-MLA40809199758_022020-F.webp",
+    "precio": "107",
+    "stock": 25,
+    "id": 2,
+    "timeStamp": 1664811977199
+  },
+  {
+    "nombre": "Notebook ASUS",
+    "descripcion": "Procesador Intel Core i3",
+    "codigo": 12347,
+    "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_841525-MLA51326243101_082022-F.webp",
+    "precio": "597",
+    "stock": 8,
+    "id": 3,
+    "timeStamp": 1664812157589
+  },
+  {
+    "nombre": "Celular Xiaomi",
+    "descripcion": "Redmi Note 11 128 GB",
+    "codigo": 12348,
+    "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_963052-MLA50484283109_062022-F.webp",
+    "precio": "249",
+    "stock": 30,
+    "id": 5,
+    "timeStamp": 1664812582322
+  },
+  {
+    "nombre": "Celular Xiaomi",
+    "descripcion": "Redmi Note 11 128 GB",
+    "codigo": 12348,
+    "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_963052-MLA50484283109_062022-F.webp",
+    "precio": "249",
+    "stock": 30,
+    "id": 6,
+    "timeStamp": 1664926310193
+  }
+]
