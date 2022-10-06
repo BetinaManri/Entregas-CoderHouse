@@ -7,7 +7,7 @@
     "precio": "297",
     "stock": 20,
     "id": 1,
-    "timeStamp": 1664811860113
+    "timeStamp": 1665009987742
   },
   {
     "nombre": "Parlante JBL",
@@ -17,7 +17,7 @@
     "precio": "107",
     "stock": 25,
     "id": 2,
-    "timeStamp": 1664811977199
+    "timeStamp": 1665010108393
   },
   {
     "nombre": "Notebook ASUS",
@@ -27,7 +27,7 @@
     "precio": "597",
     "stock": 8,
     "id": 3,
-    "timeStamp": 1664812157589
+    "timeStamp": 1665010121540
   },
   {
     "nombre": "Celular Xiaomi",
@@ -36,17 +36,7 @@
     "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_963052-MLA50484283109_062022-F.webp",
     "precio": "249",
     "stock": 30,
-    "id": 5,
-    "timeStamp": 1664812582322
-  },
-  {
-    "nombre": "Celular Xiaomi",
-    "descripcion": "Redmi Note 11 128 GB",
-    "codigo": 12348,
-    "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_963052-MLA50484283109_062022-F.webp",
-    "precio": "249",
-    "stock": 30,
-    "id": 6,
-    "timeStamp": 1664926310193
+    "id": 4,
+    "timeStamp": 1665010139916
   }
 ]

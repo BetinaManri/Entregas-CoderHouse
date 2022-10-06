@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "timeStamp": 1665017566264,
+    "productos": [
+      {
+        "nombre": "Smart TV",
+        "descripcion": "Full HD 40 pulg.",
+        "codigo": 12345,
+        "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_601675-MLA49509045387_032022-F.webp",
+        "precio": "297",
+        "stock": 20,
+        "id": 1,
+        "timeStamp": 1665009987742
+      },
+      {
+        "nombre": "Parlante JBL",
+        "descripcion": "Flip 5 portátil con bluetooth",
+        "codigo": 12346,
+        "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_672818-MLA40809199758_022020-F.webp",
+        "precio": "107",
+        "stock": 25,
+        "id": 2,
+        "timeStamp": 1665010108393
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "timeStamp": 1665017568233,
+    "productos": []
+  },
+  {
+    "id": 3,
+    "timeStamp": 1665017569510,
+    "productos": []
+  }
+]

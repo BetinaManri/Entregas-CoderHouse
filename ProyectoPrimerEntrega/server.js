@@ -1,6 +1,3 @@
-/* const express = require("express");
-const routerProductos = require ("./routes/productos.router.js");
-const routerCarrito = require ("./routes/carritos.router.js"); */
 import express from "express";
 import routerCarrito from "./routes/carritos.router.js";
 import routerProductos from "./routes/productos.router.js";
