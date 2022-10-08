@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "timeStamp": 1665017566264,
+    "timeStamp": 1665254968927,
     "productos": [
       {
         "nombre": "Smart TV",
@@ -12,27 +12,17 @@
         "stock": 20,
         "id": 1,
         "timeStamp": 1665009987742
-      },
-      {
-        "nombre": "Parlante JBL",
-        "descripcion": "Flip 5 portátil con bluetooth",
-        "codigo": 12346,
-        "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_672818-MLA40809199758_022020-F.webp",
-        "precio": "107",
-        "stock": 25,
-        "id": 2,
-        "timeStamp": 1665010108393
       }
     ]
   },
   {
     "id": 2,
-    "timeStamp": 1665017568233,
+    "timeStamp": 1665254979012,
     "productos": []
   },
   {
     "id": 3,
-    "timeStamp": 1665017569510,
+    "timeStamp": 1665255195814,
     "productos": []
   }
 ]

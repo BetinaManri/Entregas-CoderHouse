@@ -60,17 +60,21 @@ export default class Carrito {
     //getAll(): Object[] - Devuelve un array con los objetos presentes en el archivo.
     async getAllCart() {
         try {
+            if (fs.existsSync(this.nombreDelArchivo)){
             const contenido = await fs.promises.readFile(this.nombreDelArchivo, "utf-8");
             if (contenido.length > 0) {
                 const arreglo = JSON.parse(contenido);
                 return arreglo;
             }
             else {
-                return [];
+                return null;
             }
+        }else{
+            return null
+        }
         }
         catch (error) {
-            throw new Error(`Existe un error en la función "getAll": verificar el valor ingresado`);
+            throw new Error(`Existe un error en la función "getAllCart": verificar el valor ingresado`);
         }
     }
 
@@ -92,19 +96,23 @@ export default class Carrito {
 
     async saveProductInCart(idProd, idCarrito) {
         try {
+            const buscaId = await this.getCartById(idCarrito);
             let producto = await this.productos.getById(idProd);
-            const todosCarritos = await this.getAllCart();
-            const listaSincarrito = todosCarritos.filter(carr => carr.id !== idCarrito);
-            todosCarritos.forEach((carr) => {
-                if (carr.id == idCarrito) {
-                    carr.productos.push(producto)
-                    listaSincarrito.push(carr)
-                    listaSincarrito.sort((a, b) => a.id - b.id)
-                    fs.writeFileSync(this.nombreDelArchivo, JSON.stringify(listaSincarrito, null, 2))
-                }
-                null;
-            });
-
+            if (buscaId != null & producto != null) {
+                const todosCarritos = await this.getAllCart();
+                const listaSincarrito = todosCarritos.filter(carr => carr.id !== idCarrito);
+                todosCarritos.forEach((carr) => {
+                    if (carr.id == idCarrito) {
+                        carr.productos.push(producto)
+                        listaSincarrito.push(carr)
+                        listaSincarrito.sort((a, b) => a.id - b.id)
+                        fs.writeFileSync(this.nombreDelArchivo, JSON.stringify(listaSincarrito, null, 2))
+                    }
+                })
+                return await this.getCartById(idCarrito)
+            } else {
+                return null
+            }
         } catch (error) {
             throw new Error(error);
         }
@@ -114,21 +122,29 @@ export default class Carrito {
     // updateByID actualiza un objeto obtenido por su id
     async deleteProductByID(idCarr, idProd) {
         try {
+            const buscaId = await this.getCartById(idCarr);
+            let producto = await this.productos.getById(idProd);
+            if (buscaId != null & producto != null) {
+                const todosCarritos = await this.getAllCart();
+                const listaSincarrito = todosCarritos.filter(carr => carr.id !== idCarr);
+                todosCarritos.forEach((carr) => {
+                    if (carr.id == idCarr) {
+                        const prodModif = carr.productos.filter(productos => productos.id !== idProd);
+                        carr.productos = prodModif
+                        listaSincarrito.push(carr)
+                        listaSincarrito.sort((a, b) => a.id - b.id)
+                        fs.writeFileSync(this.nombreDelArchivo, JSON.stringify(listaSincarrito, null, 2))
+                    }
+                    
+                })
+                return await this.getCartById(idCarr);
+            } else {
+                return null
+            }
 
-            const todosCarritos = await this.getAllCart();
-            const listaSincarrito = todosCarritos.filter(carr => carr.id !== idCarr);
-            todosCarritos.forEach((carr) => {
-                if (carr.id == idCarr) {
-                    const prodModif=carr.productos.filter(productos => productos.id !== idProd);
-                    carr.productos=prodModif
-                    listaSincarrito.push(carr)
-                    listaSincarrito.sort((a, b) => a.id - b.id)
-                    fs.writeFileSync(this.nombreDelArchivo, JSON.stringify(listaSincarrito, null, 2))
-                }
-                null;
-            })
+
         } catch (error) {
-                throw new Error(error);
+            throw new Error(error);
         }
     }
 

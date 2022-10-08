@@ -4,11 +4,11 @@ import Carrito from "../clases/Carrito.class.js";
 
 
 const nombreDelArchivo = "Carritos";
-const carrito = new Carrito (nombreDelArchivo);
+const carrito = new Carrito(nombreDelArchivo);
 
 
 
-const router= express.Router();
+const router = express.Router();
 
 //2.a) Crea un carrito y devuelve su id.---------------------------------------------------------------------------------------------------
 router.post("/", async (req, res) => {
@@ -37,7 +37,13 @@ router.delete("/:id", async (req, res) => {
 //2.c)Me permite listar todos los productos guardados en el carrito.-----------------------------------------------------------------------------
 
 router.get("/", async (req, res) => {
-    res.json({ Carritos: await carrito.getAllCart() });
+    const todosLosCarritos=await carrito.getAllCart()
+    if (todosLosCarritos==null){
+        res.json({ error: "404 No existen carritos" })
+    }else{
+        res.json({ Carritos: todosLosCarritos });
+    }
+    
 });
 
 
@@ -57,18 +63,38 @@ router.get("/:id", async (req, res) => {
 router.post("/:id/productos/:idPrd", async (req, res) => {
     const productoAgregado = parseInt(req.params.idPrd);
     const carritoAAgregarProd = parseInt(req.params.id);
-	const respuesta = await carrito.saveProductInCart( productoAgregado,carritoAAgregarProd)      
-	res.json(respuesta);
+    const respuesta = await carrito.saveProductInCart(productoAgregado, carritoAAgregarProd)
+    if (isNaN(productoAgregado) || isNaN(carritoAAgregarProd)) {
+        res.json({ error: "401 El parametro no es un número" });
+    } else {
+        if (respuesta == null) {
+            res.json({ error: "404 Carrito o producto no encontrado" })
+        } else {
+            res.json(`201 Producto con id: ${productoAgregado} fue agregado al carrito ${carritoAAgregarProd} `)
+        }
+
+    }
 });
 
 
 //2.c)Eliminar un producto del carrito por su id de carrito y de producto
 
-router.delete("/:id/productos/:idPrd", (req,res)=>{
+router.delete("/:id/productos/:idPrd", async (req, res) => {
     const productoEliminado = parseInt(req.params.idPrd);
     const carritoActualizado = parseInt(req.params.id);
-	const contenidoSinProducto = carrito.deleteProductByID(carritoActualizado,productoEliminado);
-	res.send(contenidoSinProducto);
+    const contenidoSinProducto = await carrito.deleteProductByID(carritoActualizado, productoEliminado);
+    console.log(contenidoSinProducto)
+    if (isNaN(productoEliminado) || isNaN(carritoActualizado)) { 
+        res.json({ error: "401 El parametro no es un número" });
+    } else {
+        if (contenidoSinProducto === null) {
+            res.json({ error: "404 Carrito o producto no encontrado" })
+        } else {
+            res.json(`201 Producto con id: ${productoEliminado} del carrito ${carritoActualizado} fue eliminado`)
+        }
+
+    }
+    
 })
 
 
