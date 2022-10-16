@@ -5,12 +5,12 @@ const { Server: HttpServer } = require("http");
 const { Socket } = require("dgram");
 
 const app = express();
-const PORT = 8080;
+
 
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 
-httpServer.listen(PORT);
+httpServer.listen(8080, () => console.log("servidor Levantado"));
 
 app.use(express.static("./public"));
 

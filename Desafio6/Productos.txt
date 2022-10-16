@@ -16,5 +16,11 @@
     "precio": "199.50",
     "url": "https://cdn0.iconfinder.com/data/icons/icons-unleashed-vol1/128/-guitar.png",
     "id": 3
+  },
+  {
+    "nombre": "Guitarra electrica",
+    "precio": "150",
+    "url": "https://cdn0.iconfinder.com/data/icons/icons-unleashed-vol1/128/-guitar.png",
+    "id": 4
   }
 ]
