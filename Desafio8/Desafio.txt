@@ -1,0 +1,154 @@
+>> Consigna: Utilizando Mongo Shell, crear una base de datos llamada ecommerce que contenga dos colecciones: mensajes y productos.
+
+-> use ecommerce
+
+-> db.createCollection("mensajes")
+-> db.createCollection("productos")
+
+>>1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. 
+	El formato de los documentos debe estar en correspondencia con el que venimos utilizando en el entregable con base de datos MariaDB.
+>>2) Definir las claves de los documentos en relación a los campos de las tablas de esa base. 
+	En el caso de los productos, poner valores al campo precio entre los 100 y 5000 pesos
+	(eligiendo valores intermedios, ej: 120, 580, 900, 1280, 1700, 2300, 2860, 3350, 4320, 4990).	
+	
+-> db.mensajes.insertMany ([
+	{ 'Nombre' : 'betina@gmail.com', 
+	  'DateTime' : '21/10/2022 20:42:38',
+	  'Mensaje' : 'Hola'
+	},
+	{ 'Nombre' : 'miguel@gmail.com', 
+	  'DateTime' : '21/10/2022 20:47:17',
+	  'Mensaje' : 'Hola Bety'
+	},
+	{ 'Nombre' : 'betina@gmail.com', 
+	  'DateTime' : '21/10/2022 20:47:24',
+	  'Mensaje' : 'Todo bien Migue?'
+	},
+	{ 'Nombre' : 'miguel@gmail.com', 
+	  'DateTime' : '21/10/2022 20:47:33',
+	  'Mensaje' : 'bien de bien, vos?'
+	},
+	{ 'Nombre' : 'betina@gmail.com', 
+	  'DateTime' : '21/10/2022 20:47:44',
+	  'Mensaje' : 'bien por suerte'
+	},
+	{ 'Nombre' : 'laura@gmail.com', 
+	  'DateTime' : '21/10/2022 20:47:56',
+	  'Mensaje' : 'hola chicos'
+	},
+	{ 'Nombre' : 'laura@gmail.com', 
+	  'DateTime' : '21/10/2022 20:48:21',
+	  'Mensaje' : 'cómo están?'
+	},
+	{ 'Nombre' : 'betina@gmail.com', 
+	  'DateTime' : '21/10/2022 20:48:36',
+	  'Mensaje' : 'Laura! aca haciendo el Desafio'
+	},
+	{ 'Nombre' : 'laura@gmail.com', 
+	  'DateTime' : '21/10/2022 20:49:01',
+	  'Mensaje' : 'bien! siii yo también'
+	},
+	{ 'Nombre' : 'miguel@gmail.com', 
+	  'DateTime' : '21/10/2022 20:49:11',
+	  'Mensaje' : 'somos3'
+	}])
+
+-> db.productos.insertMany([
+	{ 'Nombre' : 'Guitarra', 
+	  'Precio' : 1280,
+	  'URL' : 'https://cdn0.iconfinder.com/data/icons/camping-and-adventure-without-backround-set-2/300/23-64.png'
+	},	
+	{ 'Nombre' : 'Guitarra Eléctrica', 
+	  'Precio' : 2860,
+	  'URL' : 'https://cdn2.iconfinder.com/data/icons/blackblue/48/guitar.png'
+	},	
+	{ 'Nombre' : 'Violín', 
+	  'Precio' : 2300,
+	  'URL' : 'https://cdn0.iconfinder.com/data/icons/music-icons-1/512/Violin.png'
+	},	
+	{ 'Nombre' : 'Órgano', 
+	  'Precio' : 3350,
+	  'URL' : 'https://cdn0.iconfinder.com/data/icons/rock-and-roll-6/64/11-synthesizer-organ-musical_instrument-piano-electronics-keyboard-keys-64.png'
+	},	
+	{ 'Nombre' : 'Piano', 
+	  'Precio' : 4320,
+	  'URL' : 'https://cdn4.iconfinder.com/data/icons/BRILLIANT/education_icons/png/64/music.png'
+	},		
+	{ 'Nombre' : 'Trompeta', 
+	  'Precio' : 1700,
+	  'URL' : 'https://cdn2.iconfinder.com/data/icons/unigrid-phantom-devices-vol-4/60/017_156_fife_trumpet_music_instrument_audio_sound-64.png'
+	},
+	{ 'Nombre' : 'Batería', 
+	  'Precio' : 4990,
+	  'URL' : 'https://cdn2.iconfinder.com/data/icons/multimedia-1-11/48/20-64.png'
+	},	
+	{ 'Nombre' : 'Tambor', 
+	  'Precio' : 120,
+	  'URL' : 'https://cdn0.iconfinder.com/data/icons/carnival-41/512/drum-carnival-percussion-instrument-musical-64.png'
+	},	
+	{ 'Nombre' : 'Redoblante', 
+	  'Precio' : 580,
+	  'URL' : 'https://cdn2.iconfinder.com/data/icons/don-t-stop-the-music/64/drum-64.png'
+	},
+	{ 'Nombre' : 'Flauta', 
+	  'Precio' : 900,
+	  'URL' : 'https://cdn3.iconfinder.com/data/icons/marching-band/703/flute_piccolo_woodwind_classic_band_instrument_music_orchestra-64.png'
+	}])	
+	
+
+>>3) Listar todos los documentos en cada colección.
+
+-> db.mensajes.find().pretty()
+-> db.productos.find().pretty()
+
+>>4) Mostrar la cantidad de documentos almacenados en cada una de ellas.
+
+-> db.mensajes.count()
+-> db.productos.count()
+
+>>5) Realizar un CRUD sobre la colección de productos:
+>>>a) Agregar un producto más en la colección de productos
+
+--> db.productos.insertOne(
+	{ 'Nombre' : 'Charango', 
+	  'Precio' : 2400,
+	  'URL' : 'https://cdn0.iconfinder.com/data/icons/musical-instruments-19/101/nounproject_instruments-11-64.png'
+	})
+
+>>>b) Realizar una consulta por nombre de producto específico:
+>>>>i) Listar los productos con precio menor a 1000 pesos.
+
+--> db.productos.find({"Precio": {$lt:1000}})
+
+>>>>ii) Listar los productos con precio entre los 1000 a 3000 pesos.
+
+--> db.productos.find({"Precio":{$gt:1000, $lt:3000}})
+
+>>>>iii) Listar los productos con precio mayor a 3000 pesos.
+
+--> db.productos.find({"Precio":{$gt:3000}})
+
+>>>>iv) Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+
+--> db.productos.find({},{"Nombre":1,"_id":0}).sort({"Precio":1}).skip(2).limit(1)
+
+>>>c) Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+
+--> db.productos.updateMany({},{$set:{"Stock":100}},{upsert:false,multi:true})
+
+>>>d) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos.
+
+--> db.productos.update({"Precio":{$gt:4000}},{$set:{"Stock":0}},{multi:true})
+
+>>>e) Borrar los productos con precio menor a 1000 pesos
+
+--> db.productos.deleteMany({"Precio":{$lt:1000}})
+
+6) Crear un usuario 'pepe' clave: 'asd456' que sólo pueda leer la base de datos ecommerce.
+	Verificar que pepe no pueda cambiar la información.
+	
+--> db.createUser({
+	user:"pepe",
+	pwd:"asd456",
+	roles:[{role:"read",db:"ecommerce"}]
+	})
