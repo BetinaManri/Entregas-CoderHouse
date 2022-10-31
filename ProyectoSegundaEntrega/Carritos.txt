@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "timeStamp": 1665254968927,
+    "productos": [
+      {
+        "nombre": "Smart TV",
+        "descripcion": "Full HD 40 pulg.",
+        "codigo": 12345,
+        "foto": "https://http2.mlstatic.com/D_NQ_NP_2X_601675-MLA49509045387_032022-F.webp",
+        "precio": "297",
+        "stock": 20,
+        "id": 1,
+        "timeStamp": 1665009987742
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "timeStamp": 1665254979012,
+    "productos": []
+  },
+  {
+    "id": 3,
+    "timeStamp": 1665255195814,
+    "productos": []
+  }
+]
