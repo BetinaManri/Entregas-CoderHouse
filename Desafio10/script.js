@@ -1,5 +1,5 @@
 
-(function runScriptSqlite() {
+ (function runScriptSqlite() {
     const knex = require('knex')({
         client: 'sqlite3',
         connection: { filename: './DB/ecommerce.sqlite' },
@@ -7,13 +7,14 @@
     });
 
 
-    //Creación de tabla mensajes => SQLite3
-    /* knex.schema.hasTable('mensajes')
+    knex.schema.hasTable('mensajes')
         .then(function (exists) {
             if (!exists) {
                 return knex.schema.createTable('mensajes', (table) => {
-                    table.string('author').notNullable();
-                    table.string('text').notNullable();
+                    //table.string('author').notNullable();
+                    //table.string('text').notNullable();
+                    table.string('entities').notNullable();
+                    table.string('result').notNullable();
                     table.increments('idNum');
                 });
             } else {
@@ -30,30 +31,31 @@
             console.log('Ending sqlite3 secuence ..');
             console.log('<------------------------->');
             //process.exit(0);
-        }); */
-    (function selectMsg() {
+        });
+    /* (function selectMsg() {
         knex
             .from('mensajes')
             .select('*')
             .then((rows) => {
                 console.log(rows);
             });
-    })();
+    })(); */
 
 })();
 
-/* (function runScriptMysql() {
-    //Parámetros de configuración MariaDB
+(function runScriptMysql() {
+
     const knex = require('knex')({
         client: 'mysql',
         connection: {
             host: '127.0.0.1',
             user: 'root',
-            password: '',
+            password: '12345',
             database: 'ecommerceProd'
         },
     });
-    //Creación de tabla productos => mySql     
+
+
     knex.schema.hasTable('productos')
         .then(function (exists) {
             if (!exists) {
@@ -76,6 +78,6 @@
         .finally(() => {
             knex.destroy();
             console.log('Ending mysql secuence ..');
-            //process.exit(0);
+            
         });
-})(); */
+})();

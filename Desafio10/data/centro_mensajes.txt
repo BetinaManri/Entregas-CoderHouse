@@ -1,0 +1,319 @@
+[
+  {
+    "entities": {
+      "author": {
+        "betina@email": {
+          "id": "betina@email",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        }
+      },
+      "chatSchema": {
+        "undefined": {
+          "author": "betina@email",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      null
+    ],
+    "id": 1
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "betina@gmail.com",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 2
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        },
+        "luis@email": {
+          "id": "luis@email",
+          "nombre": "Luis",
+          "apellido": "Perez",
+          "edad": "29",
+          "alias": "Luishi",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/29-Software_Assistant-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "luis@email",
+          "text": "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    "result": [
+      "mensajes",
+      "mensajes"
+    ],
+    "id": 3
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://www.iconfinder.com/icons/2980625/actress_avatar_girl_face_person_profile_user_icon"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "betina@gmail.com",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 4
+  },
+  {
+    "entities": {
+      "author": {
+        "user@email": {
+          "id": "user@email",
+          "nombre": "Pepe",
+          "apellido": "Díaz",
+          "edad": "40",
+          "alias": "Pepito",
+          "avatar": "http://www.example.com/"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "user@email",
+          "text": "asd"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 5
+  },
+  {
+    "entities": {
+      "author": {
+        "user@email": {
+          "id": "user@email",
+          "nombre": "Pepe",
+          "apellido": "Díaz",
+          "edad": "40",
+          "alias": "Pepito",
+          "avatar": "https://www.iconfinder.com/icons/2980612/assistant_avatar_boy_software_waiter_male_icon"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "user@email",
+          "text": "asd"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 6
+  },
+  {
+    "entities": {
+      "author": {
+        "user@email": {
+          "id": "user@email",
+          "nombre": "Pepe",
+          "apellido": "Díaz",
+          "edad": "40",
+          "alias": "Pepito",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/28-School_Girl-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "user@email",
+          "text": "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 7
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "betina@gmail.com",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 8
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "betina@gmail.com",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 9
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "betina@gmail.com",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 10
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "betina@gmail.com",
+          "text": "hola, como estan?"
+        }
+      }
+    },
+    "result": [
+      "mensajes"
+    ],
+    "id": 11
+  },
+  {
+    "entities": {
+      "author": {
+        "betina@gmail.com": {
+          "id": "betina@gmail.com",
+          "nombre": "Betina",
+          "apellido": "Manrique",
+          "edad": "28",
+          "alias": "Bety",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/15-Actress-64.png"
+        },
+        "luis@gmail.com": {
+          "id": "luis@gmail.com",
+          "nombre": "Luis",
+          "apellido": "Perez",
+          "edad": "34",
+          "alias": "Luishi",
+          "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/30-Scientist-64.png"
+        }
+      },
+      "chatSchema": {
+        "mensajes": {
+          "id": "mensajes",
+          "author": "luis@gmail.com",
+          "text": "todo bien?"
+        }
+      }
+    },
+    "result": [
+      "mensajes",
+      "mensajes"
+    ],
+    "id": 12
+  }
+]
